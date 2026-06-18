@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FileDown } from "lucide-react";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -45,16 +46,28 @@ export function Nav() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contact"
-          className="hidden items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3.5 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent/20 md:inline-flex"
-        >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
-          </span>
-          Available
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Aniket_Raut_Resume.pdf"
+            className="inline-flex items-center gap-1.5 rounded-full border border-border-hairline bg-surface-1 px-3.5 py-1.5 text-xs font-medium text-foreground transition-all hover:bg-surface-2 hover:border-accent/50"
+          >
+            <FileDown className="h-3.5 w-3.5 text-accent" />
+            Resume
+          </a>
+          <a
+            href="#contact"
+            className="hidden items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3.5 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent/20 md:inline-flex"
+          >
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+            </span>
+            Available
+          </a>
+        </div>
       </nav>
     </header>
   );
