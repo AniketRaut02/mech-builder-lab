@@ -5,7 +5,7 @@ const links = [
   { label: "LinkedIn", href: "#" }, // TODO
   { label: "GitHub", href: "#" }, // TODO
   { label: "Instagram", href: "#" }, // TODO
-  { label: "Resume", href: "#" }, // TODO
+  { label: "Resume", href: "/resume.pdf" },
 ];
 
 export function Contact() {
@@ -48,6 +48,9 @@ export function Contact() {
               <li key={l.label}>
                 <a
                   href={l.href}
+                  target={l.label === "Resume" ? "_blank" : undefined}
+                  rel={l.label === "Resume" ? "noopener noreferrer" : undefined}
+                  download={l.label === "Resume" ? "Aniket_Raut_Resume.pdf" : undefined}
                   className="group flex items-center justify-between rounded-xl border border-border-hairline bg-surface-1 px-4 py-3 text-sm transition-colors hover:bg-surface-2"
                 >
                   <span>{l.label}</span>
