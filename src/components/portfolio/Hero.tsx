@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
 import { Reveal } from "./Reveal";
+import showreelAsset from "@/assets/showreel.mp4.asset.json";
 
 const stats = [
   { value: "3+", label: "Years with Unity" },
