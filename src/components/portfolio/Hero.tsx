@@ -113,7 +113,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="border-t border-border-hairline bg-background/40 backdrop-blur">
+      <div className="relative z-10 border-t border-border-hairline bg-background/40 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-border-hairline md:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.05}>
