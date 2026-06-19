@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
 import { Reveal } from "./Reveal";
+import showreelAsset from "@/assets/showreel.mp4.asset.json";
 
 const stats = [
   { value: "3+", label: "Years with Unity" },
@@ -14,6 +15,15 @@ export function Hero() {
     <section id="top" className="relative min-h-[100svh] overflow-hidden pt-24">
       {/* TODO: replace placeholder loop with real showreel <video src="/showreel.mp4" /> */}
       <div aria-hidden className="absolute inset-0 -z-10">
+        <video
+          src={showreelAsset.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-background/70" />
         <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_70%_0%,oklch(0.30_0.04_200/_0.45),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_100%,oklch(0.25_0.02_220/_0.5),transparent_60%)]" />
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
