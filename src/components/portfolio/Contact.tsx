@@ -65,7 +65,7 @@ export function Contact() {
 
       <footer className="mt-24 border-t border-border-hairline">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-8 text-xs text-muted-foreground md:flex-row md:px-10">
-          <p>© {new Date().getFullYear()} Aniket Raut. Built with Unity-brain energy.</p>
+          <p>© {new Date().getFullYear()} Aniket Raut. Built with love for games.</p>
           <a href="#top" className="transition-colors hover:text-foreground">
             Back to top ↑
           </a>
