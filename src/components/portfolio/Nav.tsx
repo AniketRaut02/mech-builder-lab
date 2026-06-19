@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FileDown } from "lucide-react";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -48,7 +49,7 @@ export function Nav() {
         </ul>
         <div className="flex items-center gap-3">
           <a
-            href="/resume.pdf"
+            href={resumeAsset.url}
             target="_blank"
             rel="noopener noreferrer"
             download="Aniket_Raut_Resume.pdf"
