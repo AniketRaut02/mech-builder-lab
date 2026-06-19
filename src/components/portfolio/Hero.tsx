@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden pt-24">
       {/* TODO: replace placeholder loop with real showreel <video src="/showreel.mp4" /> */}
-      <div aria-hidden className="absolute inset-0 -z-10">
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
         <video
           src={showreelAsset.url}
           autoPlay
