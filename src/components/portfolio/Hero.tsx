@@ -36,7 +36,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 pb-24 md:px-10 lg:grid-cols-12 lg:gap-10 lg:pb-32">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-6 pb-24 md:px-10 lg:grid-cols-12 lg:gap-10 lg:pb-32">
         <div className="lg:col-span-8">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border-hairline bg-surface-1/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
