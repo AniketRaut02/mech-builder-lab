@@ -63,14 +63,14 @@ export const projects: Project[] = [
     media: { type: "video" },
   },
   {
-    slug: "awaiting-discharge",
-    title: "Awaiting Discharge",
+    slug: "blindspot",
+    title: "Blindspot- Breach & Escape",
     kind: "Game",
     year: "2024",
     role: "Gameplay · Systems",
     tags: ["Unity", "Narrative", "Mechanics"],
     summary:
-      "Short narrative gameplay piece exploring constrained mechanics and atmosphere over spectacle.",
+      "A short 3D game based in a Sci-Fi facility, where you have to steal a secretly secured laptop and escape the security laser system without getting hit. ",
     thumbnail: "discharge",
     media: { type: "video" },
   },
