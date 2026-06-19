@@ -14,17 +14,18 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden pt-24">
       {/* TODO: replace placeholder loop with real showreel <video src="/showreel.mp4" /> */}
-      <div aria-hidden className="absolute inset-0 -z-10">
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
         <video
           src={showreelAsset.url}
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_70%_0%,oklch(0.30_0.04_200/_0.45),transparent_55%)]" />
+        <div className="absolute inset-0 bg-background/55" />
+        <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_70%_0%,oklch(0.30_0.04_200/_0.35),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_100%,oklch(0.25_0.02_220/_0.5),transparent_60%)]" />
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
         <motion.div
@@ -35,7 +36,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 pb-24 md:px-10 lg:grid-cols-12 lg:gap-10 lg:pb-32">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-6 pb-24 md:px-10 lg:grid-cols-12 lg:gap-10 lg:pb-32">
         <div className="lg:col-span-8">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border-hairline bg-surface-1/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
@@ -112,7 +113,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="border-t border-border-hairline bg-background/40 backdrop-blur">
+      <div className="relative z-10 border-t border-border-hairline bg-background/40 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-border-hairline md:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.05}>
