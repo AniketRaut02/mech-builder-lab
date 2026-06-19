@@ -251,7 +251,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "AI Systems",
-    items: ["Behaviour trees", "Blackboards", "Utility AI", "Sensors & perception", "Steering"],
+    items: ["Behaviour trees", "Blackboards", "Utility AI", "Sensors & perception", "Pathfinding"],
   },
   {
     title: "Tools & Architecture",
@@ -259,7 +259,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Languages",
-    items: ["C#", "C++", "Python", "HLSL (basics)"],
+    items: ["C#", "C++", "Python", "Java basic"],
   },
   {
     title: "Engines",
