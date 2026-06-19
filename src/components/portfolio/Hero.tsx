@@ -85,8 +85,7 @@ export function Hero() {
                 Currently
               </p>
               <p className="mt-3 font-display text-lg leading-snug">
-                Designing a tick-budgeted AI service layer for a survival horror
-                vertical slice.
+                Designing a hospital horror survival game prototype using unity .
               </p>
               <div className="mt-5 flex flex-wrap gap-1.5">
                 {["Unity", "C#", "AI", "Tools"].map((t) => (
