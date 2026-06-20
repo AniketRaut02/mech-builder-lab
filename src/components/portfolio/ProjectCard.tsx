@@ -71,6 +71,21 @@ function PlaceholderArt({ id }: { id: string }) {
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const reduce = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handleEnter = () => {
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      void v.play().catch(() => {});
+    }
+  };
+  const handleLeave = () => {
+    const v = videoRef.current;
+    if (v) {
+      v.pause();
+      v.currentTime = 0;
+    }
+  };
   const span =
     project.span === "wide"
       ? "md:col-span-2"
