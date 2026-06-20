@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useRef } from "react";
 import type { Project } from "./data";
 
 const gradients: Record<string, string> = {
