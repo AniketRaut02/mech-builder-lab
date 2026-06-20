@@ -15,7 +15,7 @@ export function CaseStudies() {
         <SectionHeading
           eyebrow="Technical Case Studies"
           title="How the systems are built."
-          description="Architecture notes, trade-offs and the snippets I actually look at when something breaks."
+          description="Architecture notes, trade-offs and the technical execution of each project."
         />
 
         <Accordion type="single" collapsible className="mt-14 space-y-4">
@@ -57,12 +57,6 @@ export function CaseStudies() {
                     <Block label="Solutions">{cs.solutions}</Block>
                     <Block label="Performance">{cs.performance}</Block>
 
-                    <div>
-                      <Label>Snippet</Label>
-                      <pre className="mt-3 overflow-x-auto rounded-xl border border-border-hairline bg-background/80 p-5 text-[12.5px] leading-relaxed text-foreground/90">
-                        <code>{cs.snippet.code}</code>
-                      </pre>
-                    </div>
                   </div>
 
                   <aside className="space-y-6">
