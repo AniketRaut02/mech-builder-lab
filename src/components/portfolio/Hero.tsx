@@ -95,13 +95,14 @@ export function Hero() {
               >
                 Contact Me
               </a>
-              <a
-                href="#work"
+              <button
+                type="button"
+                onClick={() => setShowreelOpen(true)}
                 className="inline-flex items-center gap-2 px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Play className="h-3.5 w-3.5 fill-current" />
                 Watch showreel
-              </a>
+              </button>
             </div>
           </Reveal>
         </div>
