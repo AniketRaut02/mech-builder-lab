@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight, Play } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, Play, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
 import showreelAsset from "@/assets/showreel.mp4.asset.json";
 
@@ -11,6 +12,22 @@ const stats = [
 ];
 
 export function Hero() {
+  const [showreelOpen, setShowreelOpen] = useState(false);
+
+  useEffect(() => {
+    if (!showreelOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setShowreelOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [showreelOpen]);
+
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden pt-24">
       {/* TODO: replace placeholder loop with real showreel <video src="/showreel.mp4" /> */}
@@ -78,13 +95,14 @@ export function Hero() {
               >
                 Contact Me
               </a>
-              <a
-                href="#work"
+              <button
+                type="button"
+                onClick={() => setShowreelOpen(true)}
                 className="inline-flex items-center gap-2 px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Play className="h-3.5 w-3.5 fill-current" />
                 Watch showreel
-              </a>
+              </button>
             </div>
           </Reveal>
         </div>
@@ -129,6 +147,44 @@ export function Hero() {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {showreelOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-background/90 p-4 backdrop-blur-md md:p-10"
+            onClick={() => setShowreelOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setShowreelOpen(false)}
+              aria-label="Close showreel"
+              className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-hairline bg-surface-1/80 text-foreground transition-colors hover:bg-surface-2"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <motion.div
+              initial={{ scale: 0.96, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.96, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-border-hairline bg-black shadow-[0_30px_120px_-30px_var(--accent)]"
+            >
+              <video
+                src={showreelAsset.url}
+                autoPlay
+                controls
+                playsInline
+                className="aspect-video w-full"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
