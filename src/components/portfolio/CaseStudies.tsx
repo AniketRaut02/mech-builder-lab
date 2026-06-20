@@ -15,7 +15,7 @@ export function CaseStudies() {
         <SectionHeading
           eyebrow="Technical Case Studies"
           title="How the systems are built."
-          description="Architecture notes, trade-offs and the snippets I actually look at when something breaks."
+          description="Architecture notes, trade-offs and the technical execution of each project."
         />
 
         <Accordion type="single" collapsible className="mt-14 space-y-4">
