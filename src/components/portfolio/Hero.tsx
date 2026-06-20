@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight, Play } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, Play, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
 import showreelAsset from "@/assets/showreel.mp4.asset.json";
 
