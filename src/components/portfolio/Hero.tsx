@@ -12,6 +12,22 @@ const stats = [
 ];
 
 export function Hero() {
+  const [showreelOpen, setShowreelOpen] = useState(false);
+
+  useEffect(() => {
+    if (!showreelOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setShowreelOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [showreelOpen]);
+
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden pt-24">
       {/* TODO: replace placeholder loop with real showreel <video src="/showreel.mp4" /> */}
