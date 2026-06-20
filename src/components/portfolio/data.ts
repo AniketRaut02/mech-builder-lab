@@ -8,6 +8,7 @@ export type Project = {
   summary: string;
   thumbnail: string; // gradient placeholder id
   media?: { type: "video" | "diagram"; src?: string };
+  hoverVideo?: string;
   span?: "wide" | "tall" | "default";
 };
 
@@ -73,6 +74,7 @@ export const projects: Project[] = [
       "A short 3D game based in a Sci-Fi facility, where you have to steal a secretly secured laptop and escape the security laser system without getting hit. ",
     thumbnail: "discharge",
     media: { type: "video" },
+    hoverVideo: "/__l5e/assets-v1/0a4d316a-33c5-4fd6-97f6-267cec828474/blindspot.mp4",
   },
   {
     slug: "2d-horror",

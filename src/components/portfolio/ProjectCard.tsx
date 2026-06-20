@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useRef } from "react";
 import type { Project } from "./data";
 
 const gradients: Record<string, string> = {
@@ -70,6 +71,21 @@ function PlaceholderArt({ id }: { id: string }) {
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const reduce = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handleEnter = () => {
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      void v.play().catch(() => {});
+    }
+  };
+  const handleLeave = () => {
+    const v = videoRef.current;
+    if (v) {
+      v.pause();
+      v.currentTime = 0;
+    }
+  };
   const span =
     project.span === "wide"
       ? "md:col-span-2"
@@ -85,6 +101,10 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: index * 0.06 }}
       whileHover={reduce ? undefined : { y: -6, scale: 1.01 }}
+      onHoverStart={handleEnter}
+      onHoverEnd={handleLeave}
+      onFocus={handleEnter}
+      onBlur={handleLeave}
       className={`group relative flex flex-col overflow-hidden rounded-2xl border border-border-hairline bg-surface-1 transition-shadow duration-500 hover:shadow-[0_30px_80px_-30px_color-mix(in_oklab,var(--accent)_35%,transparent)] ${span}`}
     >
       <div
@@ -94,7 +114,18 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <div className="absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
           <PlaceholderArt id={project.thumbnail} />
         </div>
-        {/* TODO: on hover, crossfade to <video autoPlay muted loop playsInline src="..." /> */}
+        {/* Hover video crossfades over placeholder art */}
+        {project.hoverVideo && (
+          <video
+            ref={videoRef}
+            src={project.hoverVideo}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
         <div className="absolute left-4 top-4 flex items-center gap-2">
           <span className="rounded-md border border-border-hairline bg-background/60 px-2 py-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
