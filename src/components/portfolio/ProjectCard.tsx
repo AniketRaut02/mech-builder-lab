@@ -101,6 +101,10 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: index * 0.06 }}
       whileHover={reduce ? undefined : { y: -6, scale: 1.01 }}
+      onHoverStart={handleEnter}
+      onHoverEnd={handleLeave}
+      onFocus={handleEnter}
+      onBlur={handleLeave}
       className={`group relative flex flex-col overflow-hidden rounded-2xl border border-border-hairline bg-surface-1 transition-shadow duration-500 hover:shadow-[0_30px_80px_-30px_color-mix(in_oklab,var(--accent)_35%,transparent)] ${span}`}
     >
       <div
