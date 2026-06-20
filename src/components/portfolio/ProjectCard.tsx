@@ -114,7 +114,18 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <div className="absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
           <PlaceholderArt id={project.thumbnail} />
         </div>
-        {/* TODO: on hover, crossfade to <video autoPlay muted loop playsInline src="..." /> */}
+        {/* Hover video crossfades over placeholder art */}
+        {project.hoverVideo && (
+          <video
+            ref={videoRef}
+            src={project.hoverVideo}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
         <div className="absolute left-4 top-4 flex items-center gap-2">
           <span className="rounded-md border border-border-hairline bg-background/60 px-2 py-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
