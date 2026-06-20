@@ -8,6 +8,7 @@ export type Project = {
   summary: string;
   thumbnail: string; // gradient placeholder id
   media?: { type: "video" | "diagram"; src?: string };
+  hoverVideo?: string;
   span?: "wide" | "tall" | "default";
 };
 
