@@ -58,6 +58,7 @@ export const projects: Project[] = [
     summary:
       "Lightweight semi-implicit Euler physics with broadphase, impulse resolution and configurable solver budgets.",
     thumbnail: "physics",
+    thumbnailImage: customPhysicsAsset.url,
     media: { type: "diagram" },
     externalLink: "https://github.com/AniketRaut02/CutsomPhysics",
   },
