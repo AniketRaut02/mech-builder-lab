@@ -1,3 +1,6 @@
+import customBtAsset from "@/assets/custom-bt.png.asset.json";
+import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
+
 export type Project = {
   slug: string;
   title: string;
@@ -7,11 +10,13 @@ export type Project = {
   tags: string[];
   summary: string;
   thumbnail: string; // gradient placeholder id
+  thumbnailImage?: string;
   media?: { type: "video" | "diagram"; src?: string };
   hoverVideo?: string;
   span?: "wide" | "tall" | "default";
   externalLink?: string;
 };
+
 
 export const projects: Project[] = [
   {
@@ -24,6 +29,7 @@ export const projects: Project[] = [
     summary:
       "Editor-integrated behaviour tree authoring with blackboards, conditional aborts and runtime debugging.",
     thumbnail: "btree",
+    thumbnailImage: customBtAsset.url,
     media: { type: "diagram" },
     span: "wide",
     externalLink: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
@@ -52,6 +58,7 @@ export const projects: Project[] = [
     summary:
       "Lightweight semi-implicit Euler physics with broadphase, impulse resolution and configurable solver budgets.",
     thumbnail: "physics",
+    thumbnailImage: customPhysicsAsset.url,
     media: { type: "diagram" },
     externalLink: "https://github.com/AniketRaut02/CutsomPhysics",
   },

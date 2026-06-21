@@ -113,9 +113,17 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         className={`relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br ${gradients[project.thumbnail] ?? gradients.btree}`}
       >
         <div className="absolute inset-0 grain" />
-        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
-          <PlaceholderArt id={project.thumbnail} />
-        </div>
+        {project.thumbnailImage ? (
+          <img
+            src={project.thumbnailImage}
+            alt={project.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+            <PlaceholderArt id={project.thumbnail} />
+          </div>
+        )}
         {/* Hover video crossfades over placeholder art */}
         {project.hoverVideo && (
           <video
