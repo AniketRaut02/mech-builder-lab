@@ -17,8 +17,6 @@ export type Project = {
   externalLink?: string;
 };
 
-import customBtAsset from "@/assets/custom-bt.png.asset.json";
-import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
 
 export const projects: Project[] = [
   {
