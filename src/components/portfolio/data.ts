@@ -134,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
     performance:
       "Cold tick of a 60-node agent: ~0.08 ms. Pooled node instances avoid allocations during reparenting; blackboard observers use a dense int-keyed map.",
     stack: ["Unity 2022 LTS", "C# 10", "GraphView", "UI Toolkit", "ScriptableObjects"],
-    github: "https://github.com/",
+    github: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
     snippet: {
       language: "csharp",
       code: `public sealed class Selector : Composite
@@ -173,8 +173,8 @@ export const caseStudies: CaseStudy[] = [
       "A single input arbiter owns the frame; states consume verbs explicitly. Camera blends route through a custom mixer that suspends Cinemachine during scripted shots.",
     performance:
       "QTE evaluation is allocation-free; Timeline markers are pre-baked. Camera blend cost stable at ~0.05 ms per frame.",
-    stack: ["Unity 2022", "Cinemachine", "Timeline", "Input System"],
-    github: "https://github.com/",
+    stack: ["Unity", "Cinemachine", "Timeline", "Input System"],
+    github: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
     snippet: {
       language: "csharp",
       code: `public bool TryConsume(InputVerb verb, float window)
@@ -208,15 +208,15 @@ export const caseStudies: CaseStudy[] = [
     performance:
       "~400 dynamic bodies at 60 Hz on a mid-range laptop with 8 solver iterations.",
     stack: ["C# 10", "Unity Jobs (optional)", "Burst-friendly math"],
-    github: "https://github.com/",
+    github: "https://github.com/AniketRaut02/CutsomPhysics",
     snippet: {
       language: "csharp",
       code: `void Integrate(Body b, float dt)
-{
-    b.velocity += (b.force * b.invMass + gravity) * dt;
-    b.position += b.velocity * dt;
-    b.force = Vector3.zero;
-}`,
+    {
+        b.velocity += (b.force * b.invMass + gravity) * dt;
+        b.position += b.velocity * dt;
+        b.force = Vector3.zero;
+    }`,
     },
   },
 ];
