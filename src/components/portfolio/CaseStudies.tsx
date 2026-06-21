@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -87,8 +87,17 @@ export function CaseStudies() {
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 rounded-full border border-border-hairline bg-surface-1 px-4 py-2 text-sm text-foreground transition-colors hover:bg-surface-2"
                       >
-                        <Github className="h-4 w-4" />
-                        View on GitHub
+                        {cs.github.includes("github.com") ? (
+                          <>
+                            <Github className="h-4 w-4" />
+                            View on GitHub
+                          </>
+                        ) : (
+                          <>
+                            <ExternalLink className="h-4 w-4" />
+                            View on Asset Store
+                          </>
+                        )}
                       </a>
                     )}
                   </aside>

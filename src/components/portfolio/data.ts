@@ -10,6 +10,7 @@ export type Project = {
   media?: { type: "video" | "diagram"; src?: string };
   hoverVideo?: string;
   span?: "wide" | "tall" | "default";
+  externalLink?: string;
 };
 
 export const projects: Project[] = [
@@ -25,6 +26,7 @@ export const projects: Project[] = [
     thumbnail: "btree",
     media: { type: "diagram" },
     span: "wide",
+    externalLink: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
   },
   {
     slug: "re4-camera",
@@ -38,6 +40,7 @@ export const projects: Project[] = [
     thumbnail: "re4",
     media: { type: "video" },
     span: "tall",
+    externalLink: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
   },
   {
     slug: "physics-system",
@@ -50,6 +53,7 @@ export const projects: Project[] = [
       "Lightweight semi-implicit Euler physics with broadphase, impulse resolution and configurable solver budgets.",
     thumbnail: "physics",
     media: { type: "diagram" },
+    externalLink: "https://github.com/AniketRaut02/CutsomPhysics",
   },
   {
     slug: "survival-horror",
@@ -62,6 +66,7 @@ export const projects: Project[] = [
       "Zombie survival vertical slice with sensory AI, ammo scarcity loop and modular interaction framework.",
     thumbnail: "horror",
     media: { type: "video" },
+    externalLink: "https://drive.google.com/file/d/1tkBeTaaC3mae27XCaX_qJW-4QbcsjA1K/view?usp=drive_link",
   },
   {
     slug: "blindspot",
@@ -75,6 +80,7 @@ export const projects: Project[] = [
     thumbnail: "discharge",
     media: { type: "video" },
     hoverVideo: "/__l5e/assets-v1/0a4d316a-33c5-4fd6-97f6-267cec828474/blindspot.mp4",
+    externalLink: "https://aniketraut.itch.io/blindspot",
   },
   {
     slug: "2d-horror",
@@ -87,6 +93,7 @@ export const projects: Project[] = [
       "Top-down 2D horror with dynamic light occlusion, patrol AI and procedural ambience.",
     thumbnail: "horror2d",
     media: { type: "video" },
+    externalLink: "https://aniketraut.itch.io/link-shift",
   },
 ];
 
@@ -127,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
     performance:
       "Cold tick of a 60-node agent: ~0.08 ms. Pooled node instances avoid allocations during reparenting; blackboard observers use a dense int-keyed map.",
     stack: ["Unity 2022 LTS", "C# 10", "GraphView", "UI Toolkit", "ScriptableObjects"],
-    github: "https://github.com/",
+    github: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
     snippet: {
       language: "csharp",
       code: `public sealed class Selector : Composite
@@ -166,8 +173,8 @@ export const caseStudies: CaseStudy[] = [
       "A single input arbiter owns the frame; states consume verbs explicitly. Camera blends route through a custom mixer that suspends Cinemachine during scripted shots.",
     performance:
       "QTE evaluation is allocation-free; Timeline markers are pre-baked. Camera blend cost stable at ~0.05 ms per frame.",
-    stack: ["Unity 2022", "Cinemachine", "Timeline", "Input System"],
-    github: "https://github.com/",
+    stack: ["Unity", "Cinemachine", "Timeline", "Input System"],
+    github: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
     snippet: {
       language: "csharp",
       code: `public bool TryConsume(InputVerb verb, float window)
@@ -201,15 +208,15 @@ export const caseStudies: CaseStudy[] = [
     performance:
       "~400 dynamic bodies at 60 Hz on a mid-range laptop with 8 solver iterations.",
     stack: ["C# 10", "Unity Jobs (optional)", "Burst-friendly math"],
-    github: "https://github.com/",
+    github: "https://github.com/AniketRaut02/CutsomPhysics",
     snippet: {
       language: "csharp",
       code: `void Integrate(Body b, float dt)
-{
-    b.velocity += (b.force * b.invMass + gravity) * dt;
-    b.position += b.velocity * dt;
-    b.force = Vector3.zero;
-}`,
+    {
+        b.velocity += (b.force * b.invMass + gravity) * dt;
+        b.position += b.velocity * dt;
+        b.force = Vector3.zero;
+    }`,
     },
   },
 ];

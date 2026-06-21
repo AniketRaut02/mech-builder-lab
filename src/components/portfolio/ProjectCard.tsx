@@ -95,7 +95,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
 
   return (
     <motion.a
-      href={`#case-${project.slug}`}
+      href={project.externalLink}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
