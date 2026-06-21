@@ -7,11 +7,15 @@ export type Project = {
   tags: string[];
   summary: string;
   thumbnail: string; // gradient placeholder id
+  thumbnailImage?: string;
   media?: { type: "video" | "diagram"; src?: string };
   hoverVideo?: string;
   span?: "wide" | "tall" | "default";
   externalLink?: string;
 };
+
+import customBtAsset from "@/assets/custom-bt.png.asset.json";
+import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
 
 export const projects: Project[] = [
   {
