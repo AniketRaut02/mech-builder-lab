@@ -29,6 +29,7 @@ export const projects: Project[] = [
     summary:
       "Editor-integrated behaviour tree authoring with blackboards, conditional aborts and runtime debugging.",
     thumbnail: "btree",
+    thumbnailImage: customBtAsset.url,
     media: { type: "diagram" },
     span: "wide",
     externalLink: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
