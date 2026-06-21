@@ -10,6 +10,7 @@ export type Project = {
   media?: { type: "video" | "diagram"; src?: string };
   hoverVideo?: string;
   span?: "wide" | "tall" | "default";
+  externalLink?: string;
 };
 
 export const projects: Project[] = [
@@ -25,6 +26,7 @@ export const projects: Project[] = [
     thumbnail: "btree",
     media: { type: "diagram" },
     span: "wide",
+    externalLink: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
   },
   {
     slug: "re4-camera",
@@ -38,6 +40,7 @@ export const projects: Project[] = [
     thumbnail: "re4",
     media: { type: "video" },
     span: "tall",
+    externalLink: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
   },
   {
     slug: "physics-system",
@@ -50,6 +53,7 @@ export const projects: Project[] = [
       "Lightweight semi-implicit Euler physics with broadphase, impulse resolution and configurable solver budgets.",
     thumbnail: "physics",
     media: { type: "diagram" },
+    externalLink: "https://github.com/AniketRaut02/CutsomPhysics",
   },
   {
     slug: "survival-horror",
@@ -62,6 +66,7 @@ export const projects: Project[] = [
       "Zombie survival vertical slice with sensory AI, ammo scarcity loop and modular interaction framework.",
     thumbnail: "horror",
     media: { type: "video" },
+    externalLink: "https://drive.google.com/file/d/1tkBeTaaC3mae27XCaX_qJW-4QbcsjA1K/view?usp=drive_link",
   },
   {
     slug: "blindspot",
@@ -75,6 +80,7 @@ export const projects: Project[] = [
     thumbnail: "discharge",
     media: { type: "video" },
     hoverVideo: "/__l5e/assets-v1/0a4d316a-33c5-4fd6-97f6-267cec828474/blindspot.mp4",
+    externalLink: "https://aniketraut.itch.io/blindspot",
   },
   {
     slug: "2d-horror",
@@ -87,6 +93,7 @@ export const projects: Project[] = [
       "Top-down 2D horror with dynamic light occlusion, patrol AI and procedural ambience.",
     thumbnail: "horror2d",
     media: { type: "video" },
+    externalLink: "https://aniketraut.itch.io/link-shift",
   },
 ];
 
