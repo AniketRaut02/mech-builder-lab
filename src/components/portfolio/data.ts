@@ -230,6 +230,7 @@ export const caseStudies: CaseStudy[] = [
       "~400 dynamic bodies at 60 Hz on a mid-range laptop with 8 solver iterations.",
     stack: ["C# 10", "Unity Jobs (optional)", "Burst-friendly math"],
     github: "https://github.com/AniketRaut02/CutsomPhysics",
+    mediaImage: physicsMedia.url,
     snippet: {
       language: "csharp",
       code: `void Integrate(Body b, float dt)
