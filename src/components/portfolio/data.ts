@@ -1,5 +1,9 @@
 import customBtAsset from "@/assets/custom-bt.png.asset.json";
 import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
+import blindspotThumb from "@/assets/blindspot-thumb.png.asset.json";
+import horror2dThumb from "@/assets/horror2d-thumb.png.asset.json";
+import survivalHorrorThumb from "@/assets/survival-horror-thumb.png.asset.json";
+import re4Thumb from "@/assets/re4-thumb.png.asset.json";
 
 export type Project = {
   slug: string;
@@ -44,6 +48,7 @@ export const projects: Project[] = [
     summary:
       "Shoulder camera state machine with timeline-driven QTE sequences, input buffering and failure recovery.",
     thumbnail: "re4",
+    thumbnailImage: re4Thumb.url,
     media: { type: "video" },
     span: "tall",
     externalLink: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
@@ -72,6 +77,7 @@ export const projects: Project[] = [
     summary:
       "Zombie survival vertical slice with sensory AI, ammo scarcity loop and modular interaction framework.",
     thumbnail: "horror",
+    thumbnailImage: survivalHorrorThumb.url,
     media: { type: "video" },
     externalLink: "https://drive.google.com/file/d/1tkBeTaaC3mae27XCaX_qJW-4QbcsjA1K/view?usp=drive_link",
   },
@@ -85,6 +91,7 @@ export const projects: Project[] = [
     summary:
       "A short 3D game based in a Sci-Fi facility, where you have to steal a secretly secured laptop and escape the security laser system without getting hit. ",
     thumbnail: "discharge",
+    thumbnailImage: blindspotThumb.url,
     media: { type: "video" },
     hoverVideo: "/__l5e/assets-v1/0a4d316a-33c5-4fd6-97f6-267cec828474/blindspot.mp4",
     externalLink: "https://aniketraut.itch.io/blindspot",
@@ -99,6 +106,7 @@ export const projects: Project[] = [
     summary:
       "Top-down 2D horror with dynamic light occlusion, patrol AI and procedural ambience.",
     thumbnail: "horror2d",
+    thumbnailImage: horror2dThumb.url,
     media: { type: "video" },
     externalLink: "https://aniketraut.itch.io/link-shift",
   },
