@@ -127,6 +127,7 @@ export type CaseStudy = {
   performance: string;
   stack: string[];
   github?: string;
+  mediaImage?: string;
   snippet: { language: string; code: string };
 };
 
