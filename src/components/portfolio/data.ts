@@ -154,6 +154,7 @@ export const caseStudies: CaseStudy[] = [
       "Cold tick of a 60-node agent: ~0.08 ms. Pooled node instances avoid allocations during reparenting; blackboard observers use a dense int-keyed map.",
     stack: ["Unity 2022 LTS", "C# 10", "GraphView", "UI Toolkit", "ScriptableObjects"],
     github: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
+    mediaImage: btreeMedia.url,
     snippet: {
       language: "csharp",
       code: `public sealed class Selector : Composite
