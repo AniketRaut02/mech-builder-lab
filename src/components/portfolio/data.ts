@@ -4,6 +4,9 @@ import blindspotThumb from "@/assets/blindspot-thumb.png.asset.json";
 import horror2dThumb from "@/assets/horror2d-thumb.png.asset.json";
 import survivalHorrorThumb from "@/assets/survival-horror-thumb.png.asset.json";
 import re4Thumb from "@/assets/re4-thumb.png.asset.json";
+import btreeMedia from "@/assets/btree-media.png.asset.json";
+import re4Media from "@/assets/re4-media.png.asset.json";
+import physicsMedia from "@/assets/physics-media.png.asset.json";
 
 export type Project = {
   slug: string;
