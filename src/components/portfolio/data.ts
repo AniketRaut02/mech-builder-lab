@@ -104,7 +104,7 @@ export const projects: Project[] = [
     role: "Gameplay · Lighting",
     tags: ["Unity 2D", "URP Lights", "AI"],
     summary:
-      "Top-down 2D horror with dynamic light occlusion, patrol AI and procedural ambience.",
+      "Top-down 2D horror with dynamic light occlusion, unique controls, enemy AI, boss behavior and procedural ambience.",
     thumbnail: "horror2d",
     thumbnailImage: horror2dThumb.url,
     media: { type: "video" },
