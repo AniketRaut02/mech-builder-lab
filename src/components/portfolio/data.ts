@@ -98,7 +98,7 @@ export const projects: Project[] = [
   },
   {
     slug: "2d-horror",
-    title: "Atmospheric 2D Horror Prototype",
+    title: "Link & Shift",
     kind: "Game",
     year: "2023",
     role: "Gameplay · Lighting",
