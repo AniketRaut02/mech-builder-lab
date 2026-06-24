@@ -4,6 +4,9 @@ import blindspotThumb from "@/assets/blindspot-thumb.png.asset.json";
 import horror2dThumb from "@/assets/horror2d-thumb.png.asset.json";
 import survivalHorrorThumb from "@/assets/survival-horror-thumb.png.asset.json";
 import re4Thumb from "@/assets/re4-thumb.png.asset.json";
+import btreeMedia from "@/assets/btree-media.png.asset.json";
+import re4Media from "@/assets/re4-media.png.asset.json";
+import physicsMedia from "@/assets/physics-media.png.asset.json";
 
 export type Project = {
   slug: string;
@@ -124,6 +127,7 @@ export type CaseStudy = {
   performance: string;
   stack: string[];
   github?: string;
+  mediaImage?: string;
   snippet: { language: string; code: string };
 };
 
@@ -150,6 +154,7 @@ export const caseStudies: CaseStudy[] = [
       "Cold tick of a 60-node agent: ~0.08 ms. Pooled node instances avoid allocations during reparenting; blackboard observers use a dense int-keyed map.",
     stack: ["Unity 2022 LTS", "C# 10", "GraphView", "UI Toolkit", "ScriptableObjects"],
     github: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
+    mediaImage: btreeMedia.url,
     snippet: {
       language: "csharp",
       code: `public sealed class Selector : Composite
@@ -190,6 +195,7 @@ export const caseStudies: CaseStudy[] = [
       "QTE evaluation is allocation-free; Timeline markers are pre-baked. Camera blend cost stable at ~0.05 ms per frame.",
     stack: ["Unity", "Cinemachine", "Timeline", "Input System"],
     github: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
+    mediaImage: re4Media.url,
     snippet: {
       language: "csharp",
       code: `public bool TryConsume(InputVerb verb, float window)
@@ -224,6 +230,7 @@ export const caseStudies: CaseStudy[] = [
       "~400 dynamic bodies at 60 Hz on a mid-range laptop with 8 solver iterations.",
     stack: ["C# 10", "Unity Jobs (optional)", "Burst-friendly math"],
     github: "https://github.com/AniketRaut02/CutsomPhysics",
+    mediaImage: physicsMedia.url,
     snippet: {
       language: "csharp",
       code: `void Integrate(Body b, float dt)
