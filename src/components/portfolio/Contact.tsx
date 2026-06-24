@@ -3,9 +3,9 @@ import { Reveal } from "./Reveal";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const links = [
-  { label: "LinkedIn", href: "#" }, // TODO
-  { label: "GitHub", href: "#" }, // TODO
-  { label: "Instagram", href: "#" }, // TODO
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-raut02/" },
+  { label: "GitHub", href: "https://github.com/AniketRaut02" },
+  { label: "Instagram", href: "https://www.instagram.com/darkpixelgd?igsh=cGRqdTBrNWs2OGx6" },
   { label: "Resume", href: resumeAsset.url },
 ];
 
@@ -49,8 +49,8 @@ export function Contact() {
               <li key={l.label}>
                 <a
                   href={l.href}
-                  target={l.label === "Resume" ? "_blank" : undefined}
-                  rel={l.label === "Resume" ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   download={l.label === "Resume" ? "Aniket_Raut_Resume.pdf" : undefined}
                   className="group flex items-center justify-between rounded-xl border border-border-hairline bg-surface-1 px-4 py-3 text-sm transition-colors hover:bg-surface-2"
                 >
