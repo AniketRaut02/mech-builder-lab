@@ -61,10 +61,17 @@ export function CaseStudies() {
 
                   <aside className="space-y-6">
                     <div className="rounded-xl border border-border-hairline bg-surface-1 p-5">
-                      {/* TODO: replace with real gameplay clip or diagram */}
-                      <div className="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-[oklch(0.22_0.02_240)] to-[oklch(0.14_0.005_240)] grain" />
+                      <div className="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-[oklch(0.22_0.02_240)] to-[oklch(0.14_0.005_240)] grain">
+                        {cs.mediaImage && (
+                          <img
+                            src={cs.mediaImage}
+                            alt={`${cs.title} media`}
+                            className="h-full w-full object-cover"
+                          />
+                        )}
+                      </div>
                       <p className="mt-3 text-xs text-muted-foreground">
-                        Media · placeholder
+                        {cs.mediaImage ? "Media · reference" : "Media · placeholder"}
                       </p>
                     </div>
                     <div>
