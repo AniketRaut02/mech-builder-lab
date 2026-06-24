@@ -77,6 +77,7 @@ export const projects: Project[] = [
     summary:
       "Zombie survival vertical slice with sensory AI, ammo scarcity loop and modular interaction framework.",
     thumbnail: "horror",
+    thumbnailImage: survivalHorrorThumb.url,
     media: { type: "video" },
     externalLink: "https://drive.google.com/file/d/1tkBeTaaC3mae27XCaX_qJW-4QbcsjA1K/view?usp=drive_link",
   },
