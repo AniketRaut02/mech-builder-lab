@@ -98,13 +98,13 @@ export const projects: Project[] = [
   },
   {
     slug: "2d-horror",
-    title: "Atmospheric 2D Horror Prototype",
+    title: "Link & Shift",
     kind: "Game",
     year: "2023",
     role: "Gameplay · Lighting",
     tags: ["Unity 2D", "URP Lights", "AI"],
     summary:
-      "Top-down 2D horror with dynamic light occlusion, patrol AI and procedural ambience.",
+      "Top-down 2D horror with dynamic light occlusion, unique controls, enemy AI, boss behavior and procedural ambience.",
     thumbnail: "horror2d",
     thumbnailImage: horror2dThumb.url,
     media: { type: "video" },
