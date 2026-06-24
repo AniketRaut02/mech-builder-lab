@@ -195,6 +195,7 @@ export const caseStudies: CaseStudy[] = [
       "QTE evaluation is allocation-free; Timeline markers are pre-baked. Camera blend cost stable at ~0.05 ms per frame.",
     stack: ["Unity", "Cinemachine", "Timeline", "Input System"],
     github: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
+    mediaImage: re4Media.url,
     snippet: {
       language: "csharp",
       code: `public bool TryConsume(InputVerb verb, float window)
