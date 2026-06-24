@@ -106,6 +106,7 @@ export const projects: Project[] = [
     summary:
       "Top-down 2D horror with dynamic light occlusion, patrol AI and procedural ambience.",
     thumbnail: "horror2d",
+    thumbnailImage: horror2dThumb.url,
     media: { type: "video" },
     externalLink: "https://aniketraut.itch.io/link-shift",
   },
