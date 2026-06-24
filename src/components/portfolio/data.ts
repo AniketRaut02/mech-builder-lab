@@ -48,6 +48,7 @@ export const projects: Project[] = [
     summary:
       "Shoulder camera state machine with timeline-driven QTE sequences, input buffering and failure recovery.",
     thumbnail: "re4",
+    thumbnailImage: re4Thumb.url,
     media: { type: "video" },
     span: "tall",
     externalLink: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
