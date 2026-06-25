@@ -261,9 +261,9 @@ export const experience: ExperienceItem[] = [
     org: "Vanarlabs PVT LTD",
     period: "JAN - APR 2026",
     bullets: [
-      "Built a reusable interaction framework adopted across three prototype projects.",
-      "Shipped AI behaviours using a shared blackboard contract, halving agent authoring time.",
-      "Profiled and optimised hot gameplay paths, reclaiming ~3 ms/frame on target hardware.",
+      "Developed interactive 2D gameplay systems for the NamasteABC learning app.",
+      "Built reusable game systems and modular features.",
+      "Implemented NPCs, dialogue systems, and user interactions.",
     ],
   },
   {
@@ -271,9 +271,9 @@ export const experience: ExperienceItem[] = [
     org: "Vyorius Drones PVT LTD",
     period: "2024 — 2025",
     bullets: [
-      "Owned camera and input layer for a third-person prototype.",
-      "Authored Timeline tooling that let design iterate on cinematic beats without engineering.",
-      "Collaborated with art and design on a modular damage and reaction system.",
+      "Developed 3D simulation levels for an AI-powered drone simulator.",
+      "Improved drone physics and flight controls for realistic gameplay.",
+      "Implemented AI-driven NPC behaviors and interactive environments.",
     ],
   },
 ];
