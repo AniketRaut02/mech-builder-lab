@@ -2,6 +2,8 @@ import customBtAsset from "@/assets/custom-bt.png.asset.json";
 import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
 import blindspotThumb from "@/assets/blindspot-thumb.png.asset.json";
 import horror2dThumb from "@/assets/horror2d-thumb.png.asset.json";
+import blindspotVideo from "@/assets/blindspot.mp4.asset.json";
+import linkshiftVideo from "@/assets/linkshift.mp4.asset.json";
 import survivalHorrorThumb from "@/assets/survival-horror-thumb.png.asset.json";
 import re4Thumb from "@/assets/re4-thumb.png.asset.json";
 import btreeMedia from "@/assets/btree-media.png.asset.json";
