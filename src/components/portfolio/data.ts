@@ -2,6 +2,8 @@ import customBtAsset from "@/assets/custom-bt.png.asset.json";
 import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
 import blindspotThumb from "@/assets/blindspot-thumb.png.asset.json";
 import horror2dThumb from "@/assets/horror2d-thumb.png.asset.json";
+import blindspotVideo from "@/assets/blindspot.mp4.asset.json";
+import linkshiftVideo from "@/assets/linkshift.mp4.asset.json";
 import survivalHorrorThumb from "@/assets/survival-horror-thumb.png.asset.json";
 import re4Thumb from "@/assets/re4-thumb.png.asset.json";
 import btreeMedia from "@/assets/btree-media.png.asset.json";
@@ -96,7 +98,7 @@ export const projects: Project[] = [
     thumbnail: "discharge",
     thumbnailImage: blindspotThumb.url,
     media: { type: "video" },
-    hoverVideo: "/__l5e/assets-v1/0a4d316a-33c5-4fd6-97f6-267cec828474/blindspot.mp4",
+    hoverVideo: blindspotVideo.url,
     externalLink: "https://aniketraut.itch.io/blindspot",
   },
   {
@@ -111,6 +113,7 @@ export const projects: Project[] = [
     thumbnail: "horror2d",
     thumbnailImage: horror2dThumb.url,
     media: { type: "video" },
+    hoverVideo: linkshiftVideo.url,
     externalLink: "https://aniketraut.itch.io/link-shift",
   },
 ];
