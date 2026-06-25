@@ -98,7 +98,7 @@ export const projects: Project[] = [
     thumbnail: "discharge",
     thumbnailImage: blindspotThumb.url,
     media: { type: "video" },
-    hoverVideo: "/__l5e/assets-v1/0a4d316a-33c5-4fd6-97f6-267cec828474/blindspot.mp4",
+    hoverVideo: blindspotVideo.url,
     externalLink: "https://aniketraut.itch.io/blindspot",
   },
   {
@@ -113,6 +113,7 @@ export const projects: Project[] = [
     thumbnail: "horror2d",
     thumbnailImage: horror2dThumb.url,
     media: { type: "video" },
+    hoverVideo: linkshiftVideo.url,
     externalLink: "https://aniketraut.itch.io/link-shift",
   },
 ];
