@@ -85,6 +85,7 @@ export const projects: Project[] = [
     thumbnail: "horror",
     thumbnailImage: survivalHorrorThumb.url,
     media: { type: "video" },
+    hoverVideo: survivalHorrorVideo.url,
     externalLink: "https://drive.google.com/file/d/1tkBeTaaC3mae27XCaX_qJW-4QbcsjA1K/view?usp=drive_link",
   },
   {
