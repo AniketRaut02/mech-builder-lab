@@ -257,9 +257,9 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Gameplay Programming Intern",
-    org: "Studio (placeholder)",
-    period: "2024 — 2025",
+    role: "Unity Developer Intern",
+    org: "Vanarlabs PVT LTD",
+    period: "JAN - APR 2026",
     bullets: [
       "Built a reusable interaction framework adopted across three prototype projects.",
       "Shipped AI behaviours using a shared blackboard contract, halving agent authoring time.",
@@ -267,9 +267,9 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: "Gameplay Programming Intern",
-    org: "Studio (placeholder)",
-    period: "2023 — 2024",
+    role: "Unity Programmer Intern",
+    org: "Vyorius Drones PVT LTD",
+    period: "2024 — 2025",
     bullets: [
       "Owned camera and input layer for a third-person prototype.",
       "Authored Timeline tooling that let design iterate on cinematic beats without engineering.",
