@@ -41,7 +41,7 @@ export function Hero() {
           preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/55" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_70%_0%,oklch(0.30_0.04_200/_0.35),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_100%,oklch(0.25_0.02_220/_0.5),transparent_60%)]" />
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
