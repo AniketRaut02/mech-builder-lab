@@ -1,15 +1,15 @@
-import customBtAsset from "@/assets/custom-bt.png.asset.json";
-import customPhysicsAsset from "@/assets/custom-physics.png.asset.json";
-import blindspotThumb from "@/assets/blindspot-thumb.png.asset.json";
-import horror2dThumb from "@/assets/horror2d-thumb.png.asset.json";
-import blindspotVideo from "@/assets/blindspot.mp4.asset.json";
-import linkshiftVideo from "@/assets/linkshift.mp4.asset.json";
-import survivalHorrorVideo from "@/assets/survival-horror.mp4.asset.json";
-import survivalHorrorThumb from "@/assets/survival-horror-thumb.png.asset.json";
-import re4Thumb from "@/assets/re4-thumb.png.asset.json";
-import btreeMedia from "@/assets/btree-media.png.asset.json";
-import re4Media from "@/assets/re4-media.png.asset.json";
-import physicsMedia from "@/assets/physics-media.png.asset.json";
+import customBtAsset from "@/assets/custom-bt.png";
+import customPhysicsAsset from "@/assets/custom-physics.png";
+import blindspotThumb from "@/assets/blindspot-thumb.png";
+import horror2dThumb from "@/assets/horror2d-thumb.png";
+import blindspotVideo from "@/assets/blindspot.mp4";
+import linkshiftVideo from "@/assets/linkshift.mp4";
+import survivalHorrorVideo from "@/assets/survival-horror.mp4";
+import survivalHorrorThumb from "@/assets/survival-horror-thumb.png";
+import re4Thumb from "@/assets/re4-thumb.png";
+import btreeMedia from "@/assets/btree-media.png";
+import re4Media from "@/assets/re4-media.png";
+import physicsMedia from "@/assets/physics-media.png";
 
 export type Project = {
   slug: string;
@@ -33,13 +33,13 @@ export const projects: Project[] = [
     slug: "behaviour-tree",
     title: "Custom Behaviour Tree Framework",
     kind: "Framework",
-    year: "2025",
+    year: "2026",
     role: "Architecture · Tooling",
     tags: ["Unity", "C#", "GraphView", "ScriptableObjects"],
     summary:
       "Editor-integrated behaviour tree authoring with blackboards, conditional aborts and runtime debugging.",
     thumbnail: "btree",
-    thumbnailImage: customBtAsset.url,
+    thumbnailImage: customBtAsset,
     media: { type: "diagram" },
     span: "wide",
     externalLink: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
@@ -48,13 +48,13 @@ export const projects: Project[] = [
     slug: "re4-camera",
     title: "RE4 Camera + QTE Framework",
     kind: "System",
-    year: "2025",
+    year: "2026",
     role: "Gameplay · Cinematics",
     tags: ["Unity", "Cinemachine", "Timeline", "Input System"],
     summary:
       "Shoulder camera state machine with timeline-driven QTE sequences, input buffering and failure recovery.",
     thumbnail: "re4",
-    thumbnailImage: re4Thumb.url,
+    thumbnailImage: re4Thumb,
     media: { type: "video" },
     span: "tall",
     externalLink: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
@@ -63,13 +63,13 @@ export const projects: Project[] = [
     slug: "physics-system",
     title: "Custom Physics System",
     kind: "System",
-    year: "2024",
+    year: "2026",
     role: "Engine · Simulation",
     tags: ["C#", "Math", "Collisions", "Forces"],
     summary:
       "Lightweight semi-implicit Euler physics with broadphase, impulse resolution and configurable solver budgets.",
     thumbnail: "physics",
-    thumbnailImage: customPhysicsAsset.url,
+    thumbnailImage: customPhysicsAsset,
     media: { type: "diagram" },
     externalLink: "https://github.com/AniketRaut02/CutsomPhysics",
   },
@@ -83,39 +83,39 @@ export const projects: Project[] = [
     summary:
       "Zombie survival vertical slice with sensory AI, ammo scarcity loop and modular interaction framework.",
     thumbnail: "horror",
-    thumbnailImage: survivalHorrorThumb.url,
+    thumbnailImage: survivalHorrorThumb,
     media: { type: "video" },
-    hoverVideo: survivalHorrorVideo.url,
+    hoverVideo: survivalHorrorVideo,
     externalLink: "https://drive.google.com/file/d/1tkBeTaaC3mae27XCaX_qJW-4QbcsjA1K/view?usp=drive_link",
   },
   {
     slug: "blindspot",
     title: "Blindspot- Breach & Escape",
     kind: "Game",
-    year: "2024",
+    year: "2026",
     role: "Gameplay · Systems",
     tags: ["Unity", "Narrative", "Mechanics"],
     summary:
       "A short 3D game based in a Sci-Fi facility, where you have to steal a secretly secured laptop and escape the security laser system without getting hit. ",
     thumbnail: "discharge",
-    thumbnailImage: blindspotThumb.url,
+    thumbnailImage: blindspotThumb,
     media: { type: "video" },
-    hoverVideo: blindspotVideo.url,
+    hoverVideo: blindspotVideo,
     externalLink: "https://aniketraut.itch.io/blindspot",
   },
   {
     slug: "2d-horror",
     title: "Link & Shift",
     kind: "Game",
-    year: "2023",
+    year: "2026",
     role: "Gameplay · Lighting",
     tags: ["Unity 2D", "URP Lights", "AI"],
     summary:
       "Top-down 2D horror with dynamic light occlusion, unique controls, enemy AI, boss behavior and procedural ambience.",
     thumbnail: "horror2d",
-    thumbnailImage: horror2dThumb.url,
+    thumbnailImage: horror2dThumb,
     media: { type: "video" },
-    hoverVideo: linkshiftVideo.url,
+    hoverVideo: linkshiftVideo,
     externalLink: "https://aniketraut.itch.io/link-shift",
   },
 ];
@@ -159,7 +159,7 @@ export const caseStudies: CaseStudy[] = [
       "Cold tick of a 60-node agent: ~0.08 ms. Pooled node instances avoid allocations during reparenting; blackboard observers use a dense int-keyed map.",
     stack: ["Unity 2022 LTS", "C# 10", "GraphView", "UI Toolkit", "ScriptableObjects"],
     github: "https://assetstore.unity.com/packages/tools/behavior-ai/simple-behavior-tree-372442",
-    mediaImage: btreeMedia.url,
+    mediaImage: btreeMedia,
     snippet: {
       language: "csharp",
       code: `public sealed class Selector : Composite
@@ -200,7 +200,7 @@ export const caseStudies: CaseStudy[] = [
       "QTE evaluation is allocation-free; Timeline markers are pre-baked. Camera blend cost stable at ~0.05 ms per frame.",
     stack: ["Unity", "Cinemachine", "Timeline", "Input System"],
     github: "https://github.com/AniketRaut02/Blindshot-Unity-Project",
-    mediaImage: re4Media.url,
+    mediaImage: re4Media,
     snippet: {
       language: "csharp",
       code: `public bool TryConsume(InputVerb verb, float window)
@@ -235,7 +235,7 @@ export const caseStudies: CaseStudy[] = [
       "~400 dynamic bodies at 60 Hz on a mid-range laptop with 8 solver iterations.",
     stack: ["C# 10", "Unity Jobs (optional)", "Burst-friendly math"],
     github: "https://github.com/AniketRaut02/CutsomPhysics",
-    mediaImage: physicsMedia.url,
+    mediaImage: physicsMedia,
     snippet: {
       language: "csharp",
       code: `void Integrate(Body b, float dt)

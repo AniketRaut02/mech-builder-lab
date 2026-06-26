@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Play, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
-import showreelAsset from "@/assets/showreel.mp4.asset.json";
+import showreelAsset from "@/assets/showreel.mp4";
 
 const stats = [
   { value: "3+", label: "Years with Unity" },
@@ -33,7 +33,7 @@ export function Hero() {
       {/* TODO: replace placeholder loop with real showreel <video src="/showreel.mp4" /> */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
         <video
-          src={showreelAsset.url}
+          src={showreelAsset}
           autoPlay
           muted
           loop
@@ -175,7 +175,7 @@ export function Hero() {
               className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-border-hairline bg-black shadow-[0_30px_120px_-30px_var(--accent)]"
             >
               <video
-                src={showreelAsset.url}
+                src={showreelAsset}
                 autoPlay
                 controls
                 playsInline

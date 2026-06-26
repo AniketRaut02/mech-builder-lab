@@ -1,12 +1,12 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import { Reveal } from "./Reveal";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
+import resumeAsset from "@/assets/resume.pdf";
 
 const links = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-raut02/" },
   { label: "GitHub", href: "https://github.com/AniketRaut02" },
   { label: "Instagram", href: "https://www.instagram.com/darkpixelgd?igsh=cGRqdTBrNWs2OGx6" },
-  { label: "Resume", href: resumeAsset.url },
+  { label: "Resume", href: resumeAsset },
 ];
 
 export function Contact() {

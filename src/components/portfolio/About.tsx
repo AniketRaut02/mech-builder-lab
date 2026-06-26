@@ -1,6 +1,6 @@
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import profileAsset from "@/assets/profile.jpg.asset.json";
+import profileAsset from "@/assets/profile.jpg";
 
 export function About() {
   return (
@@ -40,7 +40,7 @@ export function About() {
                 {/* Circular image container */}
                 <div className="relative h-36 w-36 md:h-44 md:w-44 overflow-hidden rounded-full border border-border-hairline bg-surface-1 shadow-2xl">
                   <img
-                    src={profileAsset.url}
+                    src={profileAsset}
                     alt="Portrait of Aniket Raut"
                     className="h-full w-full object-cover grayscale-[15%] transition-all duration-700 hover:grayscale-0 hover:scale-105"
                     loading="lazy"
